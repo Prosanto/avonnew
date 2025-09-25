@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_back"
+    tools:context=".activity.SplashActivity">
+
+    <ImageView
+        android:id="@+id/img_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="140dp"
+        android:background="@drawable/avon_app_logo">
+
+    </ImageView>
+
+    <LinearLayout
+        android:id="@+id/li_login_selector"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/img_icon"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/shadow_background"
+        android:strokeColor="#FFFFFF">
+
+        <RadioGroup
+            android:id="@+id/login_radiogroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_login"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:background="@drawable/btn_title_bg_selector"
+                android:button="@null"
+                android:fontFamily="@font/avenir_nextlt_pro_regular"
+                android:gravity="center"
+                android:paddingBottom="10dp"
+                android:text="@string/login_text"
+                android:textColor="@drawable/btn_title_text_selector"
+                android:textSize="18sp" />
+
+            <RadioButton
+                android:id="@+id/rb_forgot_password"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:background="@drawable/btn_title_bg_selector"
+                android:button="@null"
+                android:fontFamily="@font/avenir_nextlt_pro_regular"
+                android:gravity="center"
+                android:paddingBottom="10dp"
+                android:text="@string/forgot_password"
+                android:textColor="@drawable/btn_title_text_selector"
+                android:textSize="18sp" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/re_login_edt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/li_login_selector"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginBottom="20dp"
+        android:visibility="visible">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/mar_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:theme="@style/Theme.MaterialComponents.Light"
+            app:cardCornerRadius="24dp"
+            app:cardElevation="8dp">
+
+            <EditText
+                android:id="@+id/edt_name"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@null"
+                android:fontFamily="@font/avenir_nextlt_pro_it"
+                android:hint=" "
+                android:imeOptions="actionNext"
+                android:paddingLeft="25dp"
+                android:textSize="18sp">
+
+            </EditText>
+        </com.google.android.material.card.MaterialCardView>
+
+        <RelativeLayout
+            android:id="@+id/re_andsign"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/circuler_pink_color"
+            android:translationZ="90dp">
+
+            <TextView
+                android:id="@+id/singelName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/avenir_nextlt_pro_bold"
+                android:text="&amp;"
+                android:textColor="@color/white"
+                android:textSize="24dp"
+                android:textStyle="bold">
+
+            </TextView>
+
+        </RelativeLayout>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/mat_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mar_name"
+            android:layout_margin="10dp"
+            android:theme="@style/Theme.MaterialComponents.Light"
+            app:cardCornerRadius="24dp"
+            app:cardElevation="8dp">
+
+            <EditText
+                android:id="@+id/edt_pass_forgotpass"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@null"
+                android:fontFamily="@font/avenir_nextlt_pro_it"
+                android:hint=" "
+                android:imeOptions="actionDone"
+                android:paddingLeft="25dp"
+                android:textSize="18sp">
+
+            </EditText>
+        </com.google.android.material.card.MaterialCardView>
+
+
+    </RelativeLayout>
+
+
+    <io.writeopia.loadingbutton.customViews.CircularProgressButton
+        android:id="@+id/btn_id"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/re_login_edt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:background="@drawable/rounded_corner_login" />
+
+</RelativeLayout>

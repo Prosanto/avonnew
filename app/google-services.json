@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "258688291532",
+    "project_id": "avon-mauritius-representative",
+    "storage_bucket": "avon-mauritius-representative.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:258688291532:android:30e0c901389bec72da6869",
+        "android_client_info": {
+          "package_name": "com.avon.mauritius.representative"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "258688291532-j5lhuvohchq0245qum01eid3l8uen1bt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDjM7oMUbI-O3pWm1E6q87YtExpISFJ-OA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "258688291532-j5lhuvohchq0245qum01eid3l8uen1bt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

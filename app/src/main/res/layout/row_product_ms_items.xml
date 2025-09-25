@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/product_item_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/item_checkbookx"
+            android:fontFamily="@font/avenir_nextlt_pro_regular"
+            android:text=""
+            android:textColor="@color/text_gray"
+            android:textSize="15sp">
+
+        </TextView>
+
+        <CheckBox
+            android:id="@+id/item_checkbookx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:theme="@style/MyCheckBox">
+
+        </CheckBox>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

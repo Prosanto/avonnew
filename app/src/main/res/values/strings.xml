@@ -1,0 +1,254 @@
+<resources>
+    <string name="app_name">AvonNew</string>
+
+    <string name="loading">Loading...</string>
+    <string name="no_internet_connection">App is offline ! No connection available. Please activate your wifi or data to confirm order. Thank You !</string>
+    <string name="ok">Ok</string>
+    <string name="cancel">Cancel</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="default_notification_channel_id" translatable="false">Avon_channel</string>
+    <string name="no_photo">No Image</string>
+
+
+    //For Login
+
+    <string name="enter_username">Please enter your Avon Client ID (# Dossier)</string>
+    <string name="enter_password">Please enter password</string>
+    <string name="enter_phone">Please enter phone number</string>
+    <string name="enter_address">Please enter address</string>
+    <string name="enter_current_password">Please enter current password</string>
+    <string name="enter_confirm_password">Please confirm password</string>
+
+    <string name="login_text">Login</string>
+    <string name="forgot_password">Forgot Password</string>
+
+    <string name="username_hint">Your Avon Client ID</string>
+    <string name="password_hint">Password</string>
+    <string name="mobile_hint">Mobile Number</string>
+
+    <string name="forgot_password_hint">Password</string>
+    <string name="reset_btn_btn">Reset</string>
+    <string name="login_btn_btn">LOGIN</string>
+    <string name="fp_password">Password</string>
+    <string name="current_passord">Current Password</string>
+
+    <string name="fp_confirmpassword">Confirm the password</string>
+    <string name="fp_btn">CONFIRM</string>
+
+    <string name="reset_password">RESET PASSWORD</string>
+    <string name="reset_password_to">Your password has been reset to:</string>
+
+    <string name="thank_you">Thank You!</string>
+    <string name="thank_you_message">Your password has been successfully reset</string>
+
+    <string name="error">ERROR</string>
+    <string name="error_message">The information you entered does not match our records</string>
+
+    <string name="logout">Logout</string>
+    <string name="logout_mesage">Are you sure, You want to logout to the application? </string>
+
+    <string name="cart_error">LIMIT FOR CATEGORY</string>
+    <string name="cart_error_message">Sorry, you have already selected maximum number of product (s) for this category</string>
+
+    <string name="error_cart_empty">New campaign</string>
+    <string name="error_cart_empty_message">A new campaign has been uploaded, your cart with the previous campaign will be deleted. Thank you.</string>
+
+
+    <string name="error_limit_empty">CHOOSE MORE GIFT</string>
+    <string name="error_limit_empty_message">Please select more product for this offer</string>
+
+
+    <string name="order_message">Unable to process this order. Some products is not available in stock. Please delete all products that are out of stock in your shopping cart then try again...</string>
+
+    <string name="error_stock_message">This product is out of stock</string>
+
+
+    <string name="no_product_category">This category is empty.</string>
+    <string name="no_product_category2">On this page\ntry on other page</string>
+
+    //For Home
+    <string name="sidebar_1">Blog / Latest News</string>
+    <string name="sidebar_2">Private Message </string>
+    <string name="sidebar_3">Avon Brochure</string>
+    <string name="sidebar_4">My Account</string>
+    <string name="sidebar_5">My shopping cart</string>
+    <string name="sidebar_6">Order history</string>
+    <string name="sidebar_7">Billing history</string>
+    <string name="sidebar_8">Privacy Policy</string>
+    <string name="sidebar_9">Terms and Conditions</string>
+
+
+    <string name="no_speical_offer">NO FLYER OFFERS</string>
+    <string name="no_offer">NO OFFERS</string>
+    <string name="no_product">NO PRODUCTS</string>
+    <string name="pease_number_unavailable">Page number unavailable</string>
+
+
+    <string name="folowus_text">FOLLOW US ON:</string>
+    <string name="company_name_1">Chamarel Cosmetics Ltd</string>
+    <string name="company_name_2">Avon Exclusive Distributor in Mauritius</string>
+    //for Privacy Policy
+    <string name="privecy_head">Privacy Policy</string>
+    <string name="privecy_detail_1">Sed ut perspiciatis unde omnis iste natus error sit
+voluptatem accusantium doloremque laudantium,
+totam rem aperiam, eaque ipsa quae ab illo inventore
+veritatis et quasi architecto beatae vitae dicta sunt
+explicabo. Nemo enim ipsam voluptatem qui</string>
+    <string name="privecy_detail_2">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</string>
+
+    //for Terms Condition
+    <string name="terms_condition_head">Terms and Conditions</string>
+    <string name="terms_condition_detail_1">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+totam rem aperiam, eaque ipsa quae ab illo inventore
+veritatis et quasi architecto beatae vitae dicta sunt
+explicabo. Nemo enim ipsam voluptatem qui</string>
+    <string name="terms_condition_detail_2">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</string>
+
+
+    <string name="sidebar_10">Video</string>
+    <string name="open_file">Open File</string>
+    <string name="pease_number">Page Number</string>
+
+
+    <string name="bill_head">Billing history</string>
+    <string name="orderhistory_head">Order history</string>
+
+
+
+    //Home Fragement
+    <string name="tab_1">All</string>
+    <string name="tab_2">Tools</string>
+    <string name="tab_3">Special Offers</string>
+
+    //For Product Added
+    <string name="added_product">PRODUCT ADDED</string>
+    <string name="see_cart">View shopping cart</string>
+    <string name="continue_shopping">Continue shopping</string>
+    <string name="added_product_busket">This product has been added to your basket</string>
+    //For Pickup
+
+    <string name="pickup_head">Pick up your order at</string>
+    <string name="pickup_1">Port Louis</string>
+    <string name="pickup_2">Curepipe</string>
+    <string name="pickup_3">Home Delivery</string>
+    <string name="pickup_4">Rodrigues</string>
+
+    //For Pickup
+    <string name="order_sent_1">ORDER SENT</string>
+    <string name="order_sent_2">Delivery will be ready in 3 hours (opening hours), except for Home delivery (24-48 hours)</string>
+    <string name="order_sent_3">ORDER HISTORY</string>
+    <string name="order_sent_4">BILLING HISTORY</string>
+
+
+    <string name="change_phone">Update Phone</string>
+    <string name="change_adress">Update Address</string>
+    <string name="Confirm">Confirm</string>
+    <string name="Logout">Logout</string>
+    <string name="change_password">CHANGE PASSWORD</string>
+    <string name="change_language">CHANGE LANGUAGE</string>
+
+    <string name="my_account">MY ACCOUNT</string>
+    <string name="Monidentité">My Avon Client ID:</string>
+    <string name="Nom">Name:</string>
+    <string name="Email">Email:</string>
+    <string name="Phone">Phone:</string>
+    <string name="Adressefacturation"> Billing address:</string>
+
+    //Billing Detail
+    <string name="order_number">ORDER NUMBER:</string>
+    <string name="order_date">ORDERED ON:</string>
+    <string name="client_id">AVON CLIENT ID:</string>
+    <string name="client_name">NAME:</string>
+    <string name="pickup_point">PICK-UP STORE:</string>
+    <string name="desc_head">DESCRIPTION</string>
+
+
+    //
+    <string name="order_number2">ORDER NUMBER:</string>
+    <string name="order_no">ORDERED ON:</string>
+    <string name="order_time">ORDERED TIME:</string>
+    <string name="at">at</string>
+
+    <string name="total_amount">TOTAL AMOUNT:</string>
+    <string name="read_more">Read More</string>
+    <string name="brochure">Avon Brochure:</string>
+    <string name="qty">QTY</string>
+    <string name="Description">Description</string>
+    <string name="PRIX">PRICE</string>
+    <string name="Indisponible">Sold out</string>
+    <string name="Enstock">In stock</string>
+    <string name="Prix_croissant">Ascending</string>
+    <string name="Prix_décroissant">Descending</string>
+
+    <string name="lanugage_english">English</string>
+    <string name="lanugage_french">French</string>
+
+
+    <string name="no_message">Your inbox is empty</string>
+    <string name="add_to_card">ADD TO CART</string>
+    <string name="QUANTITY_01"> * QUANTITY 1</string>
+    <string name="Notification">Notification</string>
+    <string name="NO_Notification"> No notification</string>
+    <string name="NO_order">No Billing History yet</string>
+    <string name="Confirmer">Confirm</string>
+    <string name="votrecommande"> your order</string>
+    <string name="Rechercher">Search</string>
+    <string name="DISPONIBLE">AVAILABLE</string>
+    <string name="SKIP">SKIP</string>
+    <string name="PANIER">CART</string>
+
+    <string name="Selectioner">Select</string>
+    <string name="unmagasin">   a store</string>
+    <string name="PRIXTotal">TOTAL PRICE</string>
+    <string name="Votrepanier">Your basket is empty</string>
+    <string name="no_Historique">No Billing History yet</string>
+    <string name="TOTAL_AMOUNT">TOTAL AMOUNT :</string>
+    <string name="TOTAL_AMOUNT_article">No blog article post yet.</string>
+    <string name="résultats">Your search results.</string>
+
+    <string name="invoice">Invoice</string>
+    <string name="no_search_found">No product</string>
+    <string name="unavailableproducts">Unable to process this order. Some products is not available in stock. Please delete all products that are out of stock in your shopping cart then try again...</string>
+    <string name="out_of_product">Quantity available for this product is:</string>
+    <string name="out_of_product_2">The selected quantity exceeds quantity available.</string>
+
+
+    <string name="filter_00">All</string>
+    <string name="filter_01">Makeup</string>
+    <string name="filter_02">Skin Care</string>
+    <string name="filter_03">Bath and body</string>
+    <string name="filter_04">Hair Care</string>
+    <string name="filter_05">Fragrances for Her</string>
+    <string name="filter_06">Men</string>
+    <string name="filter_07">Brochure</string>
+    <string name="filter_08">Accessories</string>
+
+    <string name="Erasemassage">End of the campaign</string>
+    <string name="Erasemassage_message">New campaign will start soon, if you have unsent products in basket, please send order asap. Thank you</string>
+
+    <string name="Newcampaign">New campaign</string>
+    <string name="Newcampaign_message">A new campaign has been uploaded, your cart with the previous campaign will be deleted. Thank you.</string>
+
+
+    <string name="Brochure_Avon">Avon Brochure</string>
+    <string name="Brochure_Avon_no">Brochure not available at the moment</string>
+
+    <string name="Qtyavailable">Qty available:</string>
+    <string name="Qtyavailable_2">Quantity exceeds quantity available</string>
+
+
+    <string name="change_password2">Change Password</string>
+    <string name="mode">Mode</string>
+    <string name="mode_dark">Dark</string>
+    <string name="mode_lite">Light</string>
+    <string name="lan_frenche">Frenche</string>
+    <string name="lan_english">English</string>
+    <string name="lanuage">Languague</string>
+    <string name="my_profile">My Profile</string>
+
+
+
+
+
+</resources>
