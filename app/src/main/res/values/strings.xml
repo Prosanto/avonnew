@@ -32,7 +32,6 @@
     <string name="login_btn_btn">LOGIN</string>
     <string name="fp_password">Password</string>
     <string name="current_passord">Current Password</string>
-
     <string name="fp_confirmpassword">Confirm the password</string>
     <string name="fp_btn">CONFIRM</string>
 
@@ -62,8 +61,6 @@
     <string name="order_message">Unable to process this order. Some products is not available in stock. Please delete all products that are out of stock in your shopping cart then try again...</string>
 
     <string name="error_stock_message">This product is out of stock</string>
-
-
     <string name="no_product_category">This category is empty.</string>
     <string name="no_product_category2">On this page\ntry on other page</string>
 
@@ -246,6 +243,22 @@ explicabo. Nemo enim ipsam voluptatem qui</string>
     <string name="lan_english">English</string>
     <string name="lanuage">Languague</string>
     <string name="my_profile">My Profile</string>
+
+<!--    Home Page-->
+    <string name="makeup">Makeup</string>
+    <string name="skin_care">Skin Care</string>
+    <string name="bath_and_body">Bath &amp; Body</string>
+    <string name="hair_care">Hair Care</string>
+    <string name="fragance_for_her">Fragrance for her</string>
+    <string name="fragance_for_him">Fragrance for him</string>
+    <string name="categories">Categories</string>
+
+    <string name="all_category">All Category</string>
+    <string name="welcome_message">Welcome Back,\nClaudia Alves!</string>
+    <string name="brochure_">Brochure</string>
+    <string name="outof_brochure">Out of Brochure</string>
+    <string name="accessories">Accessories</string>
+    <string name="search">Search</string>
 
 
 
