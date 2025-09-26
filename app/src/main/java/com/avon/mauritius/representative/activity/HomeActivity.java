@@ -4,6 +4,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
 
 import com.avon.mauritius.representative.R;
 import com.avon.mauritius.representative.myapplication.Myapplication;
@@ -16,6 +18,8 @@ public class HomeActivity extends BaseActivity {
     private String notification_type="";
     private String message_id="";
     private String notification_id="";
+    private ImageView broshure;
+    private ImageView mackup_img;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,6 +57,22 @@ public class HomeActivity extends BaseActivity {
 
     }
     private void initUI() {
+        broshure=(ImageView) findViewById(R.id.broshure);
+        mackup_img=(ImageView) findViewById(R.id.mackup_img);
+        broshure.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(mContext, BroshureActivity.class);
+                startActivity(intent);
+            }
+        });
+        mackup_img.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(mContext, ProductActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
 }

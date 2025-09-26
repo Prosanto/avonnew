@@ -19,10 +19,10 @@
     <!-- Download button -->
     <ImageView
         android:id="@+id/download_btn"
-        android:layout_width="35dp"
-        android:layout_marginTop="10dp"
+        android:layout_width="40dp"
         android:layout_height="30dp"
-        android:background="@drawable/download"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/view"
         android:layout_gravity="center"
         android:textSize="14sp"/>
 </LinearLayout>

@@ -211,6 +211,7 @@
                             android:layout_height="100dp"
                             android:background="@drawable/mackup"
                             android:gravity="center"
+                            android:id="@+id/mackup_img"
                             android:orientation="vertical"
                             android:padding="3dp">
 
@@ -471,6 +472,7 @@
                             <ImageView
                                 android:layout_width="90dp"
                                 android:layout_height="90dp"
+                                android:id="@+id/broshure"
                                 android:background="@drawable/brochure"
                                 android:gravity="center"
                                 android:layout_gravity="center"

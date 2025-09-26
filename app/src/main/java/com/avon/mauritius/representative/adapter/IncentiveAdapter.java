@@ -12,27 +12,17 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.recyclerview.widget.RecyclerView;
 
 import com.avon.mauritius.representative.R;
-import com.avon.mauritius.representative.callbackinterface.FilterItemCallback;
-import com.avon.mauritius.representative.model.BrochuresList;
-import com.avon.mauritius.representative.utils.PersistentUser;
-import com.bumptech.glide.Glide;
-import com.bumptech.glide.load.engine.DiskCacheStrategy;
 
-import java.util.ArrayList;
 import java.util.List;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
-
-public class BrochurAdapter extends ArrayAdapter<String> {
+public class IncentiveAdapter extends ArrayAdapter<String> {
 
     private Context context;
     private List<String> items;
 
-    public BrochurAdapter(Context context, List<String> items) {
+    public IncentiveAdapter(Context context, List<String> items) {
         super(context, 0, items);
         this.context = context;
         this.items = items;
@@ -42,7 +32,7 @@ public class BrochurAdapter extends ArrayAdapter<String> {
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         if (convertView == null) {
-            convertView = LayoutInflater.from(context).inflate(R.layout.row_brochure, parent, false);
+            convertView = LayoutInflater.from(context).inflate(R.layout.row_incentive, parent, false);
         }
 
         TextView itemText = convertView.findViewById(R.id.item_text);

@@ -47,8 +47,14 @@
             android:name=".activity.HomeActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.Design.NoActionBar"></activity>
-
-
+        <activity
+            android:name=".activity.BroshureActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Design.NoActionBar"></activity>
+        <activity
+            android:name=".activity.ProductActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Design.NoActionBar"></activity>
         <activity
             android:name=".activity.BucketListActivity"
             android:screenOrientation="portrait"
