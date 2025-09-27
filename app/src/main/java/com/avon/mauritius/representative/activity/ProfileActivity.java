@@ -16,6 +16,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatRadioButton;
 import androidx.appcompat.widget.SwitchCompat;
 
@@ -40,7 +41,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class ProfileActivity extends BaseActivity {
+public class ProfileActivity extends AppCompatActivity {
     private static final String TAG = ProfileActivity.class.getSimpleName();
     private Context mContext;
     @BindView(R.id.text_username)
@@ -57,12 +58,10 @@ public class ProfileActivity extends BaseActivity {
     TextView text_address;
     @BindView(R.id.img_addressedit)
     ImageView img_addressedit;
-
     @BindView(R.id.change_language)
     SwitchCompat change_language;
     @BindView(R.id.change_mode)
     SwitchCompat change_mode;
-
 
     private AlertDialog alertDialog;
     private BusyDialog mBusyDialog;
@@ -76,10 +75,8 @@ public class ProfileActivity extends BaseActivity {
         Configuration config = new Configuration();
         config.locale = locale;
         getResources().updateConfiguration(config, getResources().getDisplayMetrics());
-        getLayoutInflater().inflate(R.layout.activity_profile, frameLayout);
+        setContentView(R.layout.activity_profile);
         ButterKnife.bind(this);
-        Myapplication.selection = 4;
-        selectedDeselectedLayut();
         intUI();
     }
 
