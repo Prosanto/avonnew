@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_back"
+    tools:context=".activity.SplashActivity">
+
+    <ImageView
+        android:id="@+id/img_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="140dp"
+        android:background="@drawable/avon_app_logo">
+
+    </ImageView>
+
+    <RelativeLayout
+        android:id="@+id/re_login_edt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/img_icon"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginBottom="20dp"
+        android:visibility="visible">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/mar_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:theme="@style/Theme.MaterialComponents.Light"
+            app:cardCornerRadius="24dp"
+            app:cardElevation="8dp">
+
+            <EditText
+                android:id="@+id/edt_name"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@null"
+                android:fontFamily="@font/avenir_nextlt_pro_it"
+                android:hint=" "
+                android:imeOptions="actionNext"
+                android:paddingLeft="25dp"
+                android:textSize="18sp">
+
+            </EditText>
+        </com.google.android.material.card.MaterialCardView>
+
+
+    </RelativeLayout>
+
+
+    <io.writeopia.loadingbutton.customViews.CircularProgressButton
+        android:id="@+id/btn_open_google_app"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="40dp"
+        android:layout_below="@+id/re_login_edt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:background="@drawable/rounded_corner_login_goa" />
+
+    <io.writeopia.loadingbutton.customViews.CircularProgressButton
+        android:id="@+id/btn_submit"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/btn_open_google_app"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:background="@drawable/rounded_corner_login" />
+
+</RelativeLayout>

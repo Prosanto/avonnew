@@ -53,12 +53,8 @@ public class BaseActivity extends AppCompatActivity {
 
     private int selection = 0;
     private SlidingMenu slidingMenu;
-
     public LinearLayout bottom_liback;
-    public ImageView img_menu_home;
     private ImageView img_shopping_home;
-    public LinearLayout imageSider;
-    LinearLayout layoutCart_count;
 
     public ImageView image_Usermessage;
     public ImageView image_UserNotification;
@@ -94,7 +90,6 @@ public class BaseActivity extends AppCompatActivity {
 
 
         frameLayout = (FrameLayout) this.findViewById(R.id.content_frame);
-
         layout_home = (RelativeLayout) this.findViewById(R.id.layout_home);
         layout_cart = (RelativeLayout) this.findViewById(R.id.layout_cart);
         layout_notification = (RelativeLayout) this.findViewById(R.id.layout_notifications);
@@ -103,10 +98,8 @@ public class BaseActivity extends AppCompatActivity {
 
 
         bottom_liback = (LinearLayout) this.findViewById(R.id.bottom_liback);
-        img_menu_home = (ImageView) this.findViewById(R.id.img_menu_home);
         img_shopping_home = (ImageView) this.findViewById(R.id.img_shopping_home);
-        imageSider = (LinearLayout) this.findViewById(R.id.imageSider);
-        layoutCart_count = (LinearLayout) this.findViewById(R.id.layoutCart_count);
+
 
 //        image_Usermessage = (ImageView) this.findViewById(R.id.image_Usermessage);
 //        image_UserNotification = (ImageView) this.findViewById(R.id.image_UserNotification);
@@ -132,21 +125,7 @@ public class BaseActivity extends AppCompatActivity {
         img_shopping_home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Intent intent = new Intent(mContext, BucketListActivity.class);
-//                startActivity(intent);
-            }
-        });
-        layoutCart_count.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-//                Intent intent = new Intent(mContext, BucketListActivity.class);
-//                startActivity(intent);/**/
-            }
-        });
-        imageSider.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                slidingMenu.toggle();
+                  slidingMenu.toggle();
             }
         });
 
@@ -158,6 +137,28 @@ public class BaseActivity extends AppCompatActivity {
         });
 
 
+        findViewById(R.id.li_incentive).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                slidingMenu.toggle();
+                if (Myapplication.selection != 0) {
+//                    intent = new Intent(mContext, BlogActivity.class);
+//                    startActivity(intent);
+//                    finish();
+
+                }
+
+            }
+        });
+
+        findViewById(R.id.li_catalog).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                slidingMenu.toggle();
+//                intent = new Intent(mContext, BoucherActivity.class);
+//                startActivity(intent);
+            }
+        });
         findViewById(R.id.li_blog).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -171,49 +172,8 @@ public class BaseActivity extends AppCompatActivity {
 
             }
         });
-        findViewById(R.id.li_inbox).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                slidingMenu.toggle();
-                if (Myapplication.selection != 1) {
-//                    intent = new Intent(mContext, MessageActivity.class);
-//                    startActivity(intent);
-//                    finish();
-                }
 
-            }
-        });
-        findViewById(R.id.li_catalog).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                slidingMenu.toggle();
-//                intent = new Intent(mContext, BoucherActivity.class);
-//                startActivity(intent);
-            }
-        });
-        findViewById(R.id.li_mon_compte).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                slidingMenu.toggle();
-                if (Myapplication.selection != 3) {
-//                    intent = new Intent(mContext, ProfileActivity.class);
-//                    startActivity(intent);
-//                    finish();
 
-                }
-
-            }
-        });
-        findViewById(R.id.li_mon_paniar).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                slidingMenu.toggle();
-//                Intent intent = new Intent(mContext, BucketListActivity.class);
-//                startActivity(intent);
-            }
-        });
-        //=========For other activity ===============
         findViewById(R.id.li_historic).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -221,26 +181,8 @@ public class BaseActivity extends AppCompatActivity {
 //                startActivity(intent);
             }
         });
-        findViewById(R.id.li_youtube_video).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (Myapplication.selection != 10) {
-//                    intent = new Intent(mContext, VideoListActivity.class);
-//                    startActivity(intent);
-//                    finish();
-
-                }
-            }
-        });
 
 
-        findViewById(R.id.li_historic_facturation).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-//                intent = new Intent(mContext, BillingHistoryActivity.class);
-//                startActivity(intent);
-            }
-        });
         findViewById(R.id.li_politique).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -259,6 +201,8 @@ public class BaseActivity extends AppCompatActivity {
 //                startActivity(intent);
             }
         });
+
+
         findViewById(R.id.imageFacebook).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -370,7 +314,7 @@ public class BaseActivity extends AppCompatActivity {
                     break;
                 case R.id.layout_profile:
                     if (selection != 4) {
-                        intent = new Intent(mContext, ProfileActivity.class);
+                        intent = new Intent(mContext, MyAccountActivity.class);
                         startActivity(intent);
                         finish();
                     }

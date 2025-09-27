@@ -1,136 +1,144 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    >
+    android:orientation="vertical">
 
-    <androidx.core.widget.NestedScrollView
-        android:id="@+id/main_scroll_view"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- Promotional Banner -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".8"
+            android:orientation="vertical">
+
+            <!-- Banner Background -->
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/text_date_view"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/header_avon" />
+
+            <TextView
+                android:id="@+id/text_date_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:text="C4 /25-31/03/2025 - 16/04/2025"
+                android:textColor="#E91E63"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:paddingBottom="16dp">
+            android:layout_height="0dp"
+            android:layout_weight="1.4"
+            android:orientation="vertical">
 
-            <!-- Promotional Banner -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="160dp"
-                android:layout_margin="16dp"
-                android:orientation="vertical"
-                app:cardElevation="4dp">
-
-                <!-- Banner Background -->
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="140dp"
-                    android:background="@drawable/header_avon"
-                    android:contentDescription="Promotional Banner"
-                    android:scaleType="centerCrop" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginEnd="20sp"
-                    android:text="C4 /25-31/03/2025 - 16/04/2025"
-                    android:textColor="#E91E63"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
-            </LinearLayout>
-
-            <!-- Welcome Section -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center_vertical"
-                android:orientation="horizontal"
-                android:paddingHorizontal="16dp"
-                android:paddingVertical="8dp">
+                android:layout_marginTop="10dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
 
-                <TextView
-                    android:layout_width="0dp"
+                <LinearLayout
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:lineSpacingExtra="4dp"
-                    android:text="@string/welcome_message"
-                    android:textColor="#333333"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
                     android:gravity="center"
-                    android:text="👋"
-                    android:textSize="24sp" />
+                    android:orientation="horizontal">
 
-                <!-- Profile Image Placeholder -->
-                <androidx.cardview.widget.CardView
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    android:layout_marginStart="8dp"
-                    app:cardCornerRadius="30dp"
-                    app:cardElevation="2dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:fontFamily="@font/avenir_nextlt_pro_regular"
+                        android:text="@string/welcome_message"
+                        android:textColor="#333333"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
 
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/avatar"
-                        android:contentDescription="Profile Image"
-                        android:scaleType="centerCrop" />
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="bottom"
+                        android:gravity="center"
+                        android:text="👋"
+                        android:textSize="24sp" />
 
-                </androidx.cardview.widget.CardView>
+                    <!-- Profile Image Placeholder -->
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_marginStart="8dp"
+                        app:cardCornerRadius="30dp"
+                        app:cardElevation="2dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/avatar"
+                            android:contentDescription="Profile Image"
+                            android:scaleType="centerCrop" />
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
 
             </LinearLayout>
 
-            <!-- Search Bar -->
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginEnd="20dp"
-                android:background="#CCCCCC">
-            </View>
+                android:background="#CCCCCC"></View>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginHorizontal="16dp"
-                android:layout_marginVertical="8dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
                 android:background="@drawable/rounded_gray_border"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
                 android:paddingHorizontal="16dp">
 
-                <EditText
-                    android:id="@+id/search_edit_text"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginStart="12dp"
-                    android:layout_weight="1"
-                    android:background="@android:color/transparent"
-                    android:imeOptions="actionSearch"
-                    android:inputType="text"
-                    android:textColorHint="#999999"
-                    android:textSize="16sp" />
+                <!--                <EditText-->
+                <!--                    android:id="@+id/search_edit_text"-->
+                <!--                    android:layout_width="0dp"-->
+                <!--                    android:layout_height="match_parent"-->
+                <!--                    android:layout_marginStart="12dp"-->
+                <!--                    android:layout_weight="1"-->
+                <!--                    android:background="@android:color/transparent"-->
+                <!--                    android:imeOptions="actionSearch"-->
+                <!--                    android:inputType="text"-->
+                <!--                    android:textColorHint="#999999"-->
+                <!--                    android:textSize="16sp" />-->
 
                 <ImageView
                     android:layout_width="20dp"
                     android:layout_height="20dp"
                     android:contentDescription="Search"
                     android:src="@drawable/ic_search"
-                    android:tint="#E91E63" />
+                    app:tint="#E91E63" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -147,16 +155,26 @@
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginEnd="20dp"
                 android:background="#CCCCCC">
 
             </View>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            android:orientation="vertical">
             <!-- Categories Section -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
-                android:layout_marginBottom="16dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="15dp"
                 android:orientation="horizontal">
 
                 <TextView
@@ -164,9 +182,10 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:layout_weight="1"
+                    android:fontFamily="@font/avenir_nextlt_pro_bold"
                     android:text="@string/categories"
                     android:textColor="#333333"
-                    android:textSize="24sp"
+                    android:textSize="18sp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -174,411 +193,342 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginEnd="20sp"
+                    android:fontFamily="@font/avenir_nextlt_pro_regular"
                     android:text="@string/all_category"
                     android:textColor="#E91E63"
                     android:textSize="14sp"
-                    android:textStyle="bold" />
+                    android:textStyle="normal" />
             </LinearLayout>
 
 
             <!-- Categories Grid -->
-            <LinearLayout
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:orientation="horizontal"
-                android:paddingHorizontal="8dp">
+                android:layout_height="wrap_content">
 
-                <!-- Row 1 -->
+
+                <!-- Makeup -->
                 <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="horizontal">
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="100dp"
+                    android:layout_height="120dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
 
-                    <!-- Makeup -->
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="120dp"
-                        android:layout_margin="5dp"
-                        android:foreground="?attr/selectableItemBackground"
+                    <ImageView
+                        android:id="@+id/mackup_img"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="@drawable/mackup"
+                        android:gravity="center"
                         android:orientation="vertical"
-                        app:cardCornerRadius="12dp"
-                        app:cardElevation="3dp">
+                        android:padding="3dp">
 
-                        <ImageView
-                            android:layout_width="100dp"
-                            android:layout_height="100dp"
-                            android:background="@drawable/mackup"
-                            android:gravity="center"
-                            android:id="@+id/mackup_img"
-                            android:orientation="vertical"
-                            android:padding="3dp">
+                    </ImageView>
 
-                        </ImageView>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_marginTop="2dp"
-                            android:gravity="center"
-                            android:text="@string/makeup"
-                            android:textColor="#333333"
-                            android:textSize="12sp"
-                            android:textStyle="bold" />
-                    </LinearLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="2dp"
+                        android:gravity="center"
+                        android:text="@string/makeup"
+                        android:textColor="#333333"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/avenir_nextlt_pro_regular"
+                        android:textStyle="normal" />
                 </LinearLayout>
 
+
+                <!-- Makeup -->
                 <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="horizontal">
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="100dp"
+                    android:layout_height="120dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
 
-                    <!-- Makeup -->
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="120dp"
-                        android:layout_margin="5dp"
-                        android:foreground="?attr/selectableItemBackground"
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="@drawable/skin_care"
+                        android:gravity="center"
                         android:orientation="vertical"
-                        app:cardCornerRadius="12dp"
-                        app:cardElevation="3dp">
+                        android:padding="3dp">
 
-                        <ImageView
-                            android:layout_width="100dp"
-                            android:layout_height="100dp"
-                            android:background="@drawable/skin_care"
-                            android:gravity="center"
-                            android:orientation="vertical"
-                            android:padding="3dp">
+                    </ImageView>
 
-                        </ImageView>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_marginTop="2dp"
-                            android:gravity="center"
-                            android:text="@string/skin_care"
-                            android:textColor="#333333"
-                            android:textSize="12sp"
-                            android:textStyle="bold" />
-                    </LinearLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="2dp"
+                        android:gravity="center"
+                        android:text="@string/skin_care"
+                        android:textColor="#333333"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/avenir_nextlt_pro_regular"
+                        android:textStyle="normal" />
                 </LinearLayout>
 
+
+                <!-- Makeup -->
                 <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="horizontal">
+                    android:layout_marginRight="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="100dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:layout_height="120dp">
 
-                    <!-- Makeup -->
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="120dp"
-                        android:layout_margin="5dp"
-                        android:foreground="?attr/selectableItemBackground"
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="@drawable/bath_body"
+                        android:gravity="center"
                         android:orientation="vertical"
-                        app:cardCornerRadius="12dp"
-                        app:cardElevation="3dp">
+                        android:padding="3dp">
 
-                        <ImageView
-                            android:layout_width="100dp"
-                            android:layout_height="100dp"
-                            android:background="@drawable/bath_body"
-                            android:gravity="center"
-                            android:orientation="vertical"
-                            android:padding="3dp">
+                    </ImageView>
 
-                        </ImageView>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_marginTop="2dp"
-                            android:gravity="center"
-                            android:text="@string/bath_and_body"
-                            android:textColor="#333333"
-                            android:textSize="12sp"
-                            android:textStyle="bold" />
-                    </LinearLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="2dp"
+                        android:gravity="center"
+                        android:text="@string/bath_and_body"
+                        android:textColor="#333333"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/avenir_nextlt_pro_regular"
+                        android:textStyle="normal" />
                 </LinearLayout>
-            </LinearLayout>
+            </RelativeLayout>
 
-            <LinearLayout
+            <RelativeLayout
+                android:layout_marginTop="20dp"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:orientation="horizontal"
-                android:paddingHorizontal="8dp">
+                android:layout_height="wrap_content">
 
-                <!-- Row 1 -->
+
+                <!-- Makeup -->
                 <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="horizontal">
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="100dp"
+                    android:layout_height="120dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
 
-                    <!-- Makeup -->
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="120dp"
-                        android:layout_margin="5dp"
-                        android:foreground="?attr/selectableItemBackground"
+                    <ImageView
+                        android:id="@+id/hair_care_img"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="@drawable/hair_care"
+                        android:gravity="center"
                         android:orientation="vertical"
-                        app:cardCornerRadius="12dp"
-                        app:cardElevation="3dp">
+                        android:padding="3dp">
 
-                        <ImageView
-                            android:layout_width="100dp"
-                            android:layout_height="100dp"
-                            android:background="@drawable/hair_care"
-                            android:gravity="center"
-                            android:orientation="vertical"
-                            android:padding="3dp">
+                    </ImageView>
 
-                        </ImageView>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_marginTop="2dp"
-                            android:gravity="center"
-                            android:text="@string/hair_care"
-                            android:textColor="#333333"
-                            android:textSize="12sp"
-                            android:textStyle="bold" />
-                    </LinearLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="2dp"
+                        android:gravity="center"
+                        android:text="@string/hair_care"
+                        android:textColor="#333333"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/avenir_nextlt_pro_regular"
+                        android:textStyle="normal" />
                 </LinearLayout>
 
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="horizontal">
 
-                    <!-- Makeup -->
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="120dp"
-                        android:layout_margin="5dp"
-                        android:foreground="?attr/selectableItemBackground"
+                <!-- Makeup -->
+                <LinearLayout
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="100dp"
+                    android:layout_height="120dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="@drawable/fragnence_her"
+                        android:gravity="center"
                         android:orientation="vertical"
-                        app:cardCornerRadius="12dp"
-                        app:cardElevation="3dp">
+                        android:padding="3dp">
 
-                        <ImageView
-                            android:layout_width="100dp"
-                            android:layout_height="100dp"
-                            android:background="@drawable/fragnence_her"
-                            android:gravity="center"
-                            android:orientation="vertical"
-                            android:padding="3dp">
+                    </ImageView>
 
-                        </ImageView>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_marginTop="2dp"
-                            android:gravity="center"
-                            android:text="@string/fragance_for_her"
-                            android:textColor="#333333"
-                            android:textSize="12sp"
-                            android:textStyle="bold" />
-                    </LinearLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="2dp"
+                        android:gravity="center"
+                        android:text="@string/fragance_for_her"
+                        android:textColor="#333333"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/avenir_nextlt_pro_regular"
+                        android:textStyle="normal" />
                 </LinearLayout>
 
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="horizontal">
 
-                    <!-- Makeup -->
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="120dp"
-                        android:layout_margin="5dp"
-                        android:foreground="?attr/selectableItemBackground"
+                <!-- Makeup -->
+                <LinearLayout
+                    android:layout_marginRight="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="100dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:layout_height="120dp">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="@drawable/fragnance"
+                        android:gravity="center"
                         android:orientation="vertical"
-                        app:cardElevation="3dp">
+                        android:padding="3dp">
 
-                        <ImageView
-                            android:layout_width="100dp"
-                            android:layout_height="100dp"
-                            android:background="@drawable/fragnance"
-                            android:gravity="center"
-                            android:orientation="vertical"
-                           >
-                        </ImageView>
+                    </ImageView>
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_marginTop="2dp"
-                            android:gravity="center"
-                            android:text="@string/fragance_for_him"
-                            android:textColor="#333333"
-                            android:textSize="12sp"
-                            android:textStyle="bold" />
-                    </LinearLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="2dp"
+                        android:gravity="center"
+                        android:text="@string/fragance_for_him"
+                        android:textColor="#333333"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/avenir_nextlt_pro_regular"
+                        android:textStyle="normal" />
                 </LinearLayout>
-            </LinearLayout>
-            <!-- Quick Access Section -->
+            </RelativeLayout>
 
-
-            <!-- Quick Access Items -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#e8e8e8"
-                android:gravity="center"
-                android:orientation="horizontal"
-                android:paddingHorizontal="8dp"
-                android:paddingTop="10sp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:orientation="horizontal"
-                    android:paddingHorizontal="8dp">
-
-                    <!-- Row 1 -->
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:orientation="horizontal">
-
-                        <!-- Makeup -->
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="110dp"
-                            android:layout_margin="10dp"
-                            android:foreground="?attr/selectableItemBackground"
-                            android:orientation="vertical"
-                            app:cardCornerRadius="12dp"
-                            app:cardElevation="3dp">
-
-                            <ImageView
-                                android:layout_width="90dp"
-                                android:layout_height="90dp"
-                                android:id="@+id/broshure"
-                                android:background="@drawable/brochure"
-                                android:gravity="center"
-                                android:layout_gravity="center"
-                                android:orientation="vertical"
-                                android:padding="3dp">
-
-                            </ImageView>
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:layout_marginTop="2dp"
-                                android:gravity="center"
-                                android:text="@string/brochure_"
-                                android:textColor="#333333"
-                                android:textSize="12sp"
-                                android:textStyle="bold" />
-                        </LinearLayout>
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:orientation="horizontal">
-
-                        <!-- Makeup -->
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="110dp"
-                            android:layout_margin="10dp"
-                            android:foreground="?attr/selectableItemBackground"
-                            android:orientation="vertical"
-                            app:cardCornerRadius="12dp"
-                            app:cardElevation="3dp">
-
-                            <ImageView
-                                android:layout_width="90dp"
-                                android:layout_height="90dp"
-                                android:background="@drawable/outofbrochure"
-                                android:gravity="center"
-                                android:layout_gravity="center"
-                                android:orientation="vertical"
-                                android:padding="3dp">
-
-                            </ImageView>
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:layout_marginTop="2dp"
-                                android:gravity="center"
-                                android:text="@string/outof_brochure"
-                                android:textColor="#333333"
-                                android:textSize="12sp"
-                                android:textStyle="bold" />
-                        </LinearLayout>
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:orientation="horizontal">
-
-                        <!-- Makeup -->
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="110dp"
-                            android:layout_margin="5dp"
-                            android:foreground="?attr/selectableItemBackground"
-                            android:orientation="vertical"
-                            >
-
-                            <ImageView
-                                android:layout_width="90dp"
-                                android:layout_height="90dp"
-                                android:background="@drawable/accesorries"
-                                android:gravity="center"
-                                android:layout_gravity="center"
-                                android:orientation="vertical">
-
-                            </ImageView>
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:layout_marginTop="2dp"
-                                android:gravity="center"
-                                android:text="@string/accessories"
-                                android:textColor="#333333"
-                                android:textSize="12sp"
-                                android:textStyle="bold" />
-                        </LinearLayout>
-                    </LinearLayout>
-                </LinearLayout>
-
-
-            </LinearLayout>
 
         </LinearLayout>
 
-    </androidx.core.widget.NestedScrollView>
+        <!-- Quick Access Section -->
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <!-- Quick Access Items -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="#e8e8e8"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+            <!-- Makeup -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:foreground="?attr/selectableItemBackground"
+                android:orientation="vertical"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="3dp">
+
+                <ImageView
+                    android:id="@+id/broshure"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/brochure"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="3dp">
+
+                </ImageView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="@font/avenir_nextlt_pro_regular"
+                    android:gravity="center"
+                    android:text="@string/brochure_"
+                    android:textColor="#333333"
+                    android:textSize="12sp"
+                    android:textStyle="normal" />
+            </LinearLayout>
+
+            <!-- Makeup -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:foreground="?attr/selectableItemBackground"
+                android:orientation="vertical"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="3dp">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/outofbrochure"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="3dp">
+
+                </ImageView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="@font/avenir_nextlt_pro_regular"
+                    android:gravity="center"
+                    android:text="@string/outof_brochure"
+                    android:textColor="#333333"
+                    android:textSize="12sp"
+                    android:textStyle="normal" />
+            </LinearLayout>
+
+
+            <!-- Makeup -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:foreground="?attr/selectableItemBackground"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/accesorries"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                </ImageView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="@font/avenir_nextlt_pro_regular"
+                    android:gravity="center"
+                    android:text="@string/accessories"
+                    android:textColor="#333333"
+                    android:textSize="12sp"
+                    android:textStyle="normal" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

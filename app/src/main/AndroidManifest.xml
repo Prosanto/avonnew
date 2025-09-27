@@ -65,6 +65,17 @@
             android:screenOrientation="portrait"
             android:theme="@style/Theme.Design.NoActionBar"></activity>
 
+        <activity
+            android:name=".activity.MyAccountActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Design.NoActionBar"></activity>
+
+        <activity
+            android:name=".activity.AuthonticationsetupActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Design.NoActionBar"></activity>
+
+
 
         <activity
             android:name=".activity.MessageActivity"
