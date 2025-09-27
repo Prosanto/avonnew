@@ -185,8 +185,16 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/avenir_nextlt_pro_regular"
                     android:text="@string/incentive"
+                    android:layout_marginRight="30dp"
                     android:textColor="@color/black"
                     android:textSize="18sp"></TextView>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="right|center"
+                    android:background="@drawable/ic_circle_arrow_right"
+                    android:layout_height="wrap_content">
+
+                </ImageView>
 
             </LinearLayout>
 
@@ -205,9 +213,16 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/avenir_nextlt_pro_regular"
                     android:text="@string/sells_details"
+                    android:layout_marginRight="15dp"
                     android:textColor="@color/black"
                     android:textSize="18sp"></TextView>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="right|center"
+                    android:background="@drawable/ic_circle_arrow_right"
+                    android:layout_height="wrap_content">
 
+                </ImageView>
             </LinearLayout>
 
 
@@ -228,15 +243,31 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
             android:fontFamily="@font/avenir_nextlt_pro_regular"
             android:text="@string/my_sels"
             android:textColor="@color/teal_700"
-            android:textSize="16sp"></TextView>
+            android:textSize="18sp"></TextView>
 
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+            <GridView
+                android:id="@+id/mysell_list"
+                android:layout_width="match_parent"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:numColumns="2"
+                android:layout_marginLeft="20dp"
+                android:horizontalSpacing="8dp"
+                android:gravity="center"
+                android:verticalSpacing="8dp"
+                android:stretchMode="columnWidth"
+                android:layout_height="wrap_content"
+                android:divider="@null"
+                android:dividerHeight="1dp"/>
 
         </LinearLayout>
 
