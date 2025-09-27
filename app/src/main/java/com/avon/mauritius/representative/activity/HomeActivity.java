@@ -12,14 +12,15 @@ import com.avon.mauritius.representative.myapplication.Myapplication;
 import com.avon.mauritius.representative.utils.PersistentUser;
 import java.util.Locale;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
+
 public class HomeActivity extends BaseActivity {
     private static final String TAG = HomeActivity.class.getSimpleName();
     private Context mContext;
     private String notification_type="";
     private String message_id="";
     private String notification_id="";
-    private ImageView broshure;
-    private ImageView mackup_img;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +35,6 @@ public class HomeActivity extends BaseActivity {
         ButterKnife.bind(this);
         Myapplication.selection = 0;
         selectedDeselectedLayut();
-        //bottom_liback.setBackground(mContext.getResources().getDrawable(R.drawable.rounded_corner_main_blue));
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
             if (extras.containsKey("notification_type")) {
@@ -57,22 +57,37 @@ public class HomeActivity extends BaseActivity {
 
     }
     private void initUI() {
-        broshure=(ImageView) findViewById(R.id.broshure);
-        mackup_img=(ImageView) findViewById(R.id.mackup_img);
-        broshure.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(mContext, BroshureActivity.class);
+
+    }
+
+    @OnClick({R.id.layout_broshure, R.id.layout_accessories, R.id.mackup_img})
+    public void onViewClicked(View view) {
+        Intent intent;
+        switch (view.getId()) {
+            case R.id.layout_broshure:
+                intent = new Intent(mContext, ProductOthersActivity.class);
+                intent.putExtra("product_type", 1);
                 startActivity(intent);
-            }
-        });
-        mackup_img.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(mContext, ProductActivity.class);
+                break;
+            case R.id.layout_outof_brochure:
+                intent = new Intent(mContext, ProductOthersActivity.class);
+                intent.putExtra("product_type", 2);
                 startActivity(intent);
-            }
-        });
+                break;
+            case R.id.layout_accessories:
+                intent = new Intent(mContext, ProductOthersActivity.class);
+                intent.putExtra("product_type", 3);
+                startActivity(intent);
+                break;
+
+            case R.id.mackup_img:
+                intent = new Intent(mContext, ProductActivity.class);
+                startActivity(intent);
+                break;
+            default:
+                break;
+
+        }
     }
 
 }

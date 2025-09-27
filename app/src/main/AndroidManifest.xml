@@ -61,6 +61,11 @@
             android:theme="@style/Theme.Design.NoActionBar"></activity>
 
         <activity
+            android:name=".activity.ProductOthersActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Design.NoActionBar"></activity>
+
+        <activity
             android:name=".activity.NotificationActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.Design.NoActionBar"></activity>
