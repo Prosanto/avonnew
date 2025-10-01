@@ -65,7 +65,7 @@ public class HomeActivity extends BaseActivity {
         Intent intent;
         switch (view.getId()) {
             case R.id.layout_broshure:
-                intent = new Intent(mContext, ProductOthersActivity.class);
+                intent = new Intent(mContext, BroshureActivity.class);
                 intent.putExtra("product_type", 1);
                 startActivity(intent);
                 break;

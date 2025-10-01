@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!-- Timeline Container -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal">
+
+        <!-- Left Side: Timeline -->
+        <RelativeLayout
+            android:id="@+id/timeline_container"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="16dp">
+
+            <!-- Top Connector Line -->
+            <View
+                android:id="@+id/top_line"
+                android:layout_width="4dp"
+                android:layout_height="20dp"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentTop="true"
+                android:background="#E91E63"
+                android:layout_marginBottom="3dp"
+                android:visibility="visible" />
+
+            <!-- Circle Indicator -->
+            <FrameLayout
+                android:id="@+id/circle_container"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/top_line">
+
+                <!-- Outer Circle -->
+                <View
+                    android:id="@+id/outer_circle"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/circle_outer_completed" />
+
+                <!-- Inner Circle -->
+                <View
+                    android:id="@+id/inner_circle"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/circle_inner_completed" />
+
+            </FrameLayout>
+
+            <!-- Bottom Connector Line -->
+            <View
+                android:id="@+id/bottom_line"
+                android:layout_width="4dp"
+                android:layout_height="20dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/circle_container"
+                android:layout_marginTop="3dp"
+                android:background="#E91E63"
+                android:visibility="visible" />
+
+        </RelativeLayout>
+
+        <!-- Right Side: Content -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginTop="30dp">
+
+            <!-- Quarter Info -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <!-- Quarter Label and Amount -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/quarter_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Quarterly 1"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="#333333" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" - "
+                        android:textSize="18sp"
+                        android:textColor="#333333" />
+
+                    <TextView
+                        android:id="@+id/quarter_amount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rs 70,000"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="#8E44AD" />
+
+                </LinearLayout>
+
+                <!-- Star + Status in a row -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:id="@+id/star_icon"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_star"
+                        android:layout_marginStart="8dp"
+                        android:visibility="visible"
+                        android:contentDescription="Completed" />
+
+                    <TextView
+                        android:id="@+id/completion_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Total Sales \n Completed"
+                        android:textSize="12sp"
+                        android:textColor="#E91E63"
+                        android:textStyle="bold"
+                        android:layout_marginStart="6dp"
+                        android:visibility="visible" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Total Sales Info (for in-progress quarters) -->
+            <LinearLayout
+                android:id="@+id/total_sales_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_star_blue"
+                    android:layout_marginEnd="8dp"
+                    android:contentDescription="Total Sales" />
+
+                <TextView
+                    android:id="@+id/total_sales_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total Sales : Rs 180,000"
+                    android:textSize="12sp"
+                    android:textColor="#E91E63"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

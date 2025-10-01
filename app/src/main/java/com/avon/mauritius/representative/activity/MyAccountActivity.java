@@ -56,8 +56,8 @@ public class MyAccountActivity extends BaseActivity {
 
                 break;
             case R.id.layout_for_incentive:
-
-
+                intent = new Intent(mContext, IncentiveActivity.class);
+                startActivity(intent);
                 break;
             default:
                 break;

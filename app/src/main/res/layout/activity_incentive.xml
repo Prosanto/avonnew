@@ -1,0 +1,310 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- Tabs -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:orientation="horizontal">
+
+        <!-- Tab 1 -->
+        <LinearLayout
+            android:id="@+id/yearly_tab"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@drawable/broshureab_selected">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/yearly_incentive"
+                android:textSize="14sp"
+                android:textColor="#7603cc"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <!-- Tab 2 -->
+        <LinearLayout
+            android:id="@+id/quarterly_tab"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@drawable/broshureab_deselected">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/quarterly_incentive"
+                android:textColor="#7603cc"
+                android:textSize="14sp"
+
+                android:textStyle="bold"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/other_tab"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_weight="1.8"
+            android:gravity="center"
+            android:background="@drawable/broshureab_deselected">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/others_incentive"
+                android:textSize="14sp"
+                android:textColor="#7603cc"
+                android:textStyle="bold"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Divider -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1.5dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="#dfdfdf" />
+
+    <!-- Content Area for Tab 1 -->
+    <LinearLayout
+        android:id="@+id/content_tab_yearly"
+        android:layout_width="match_parent"
+        android:visibility="visible"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:id="@+id/title_text"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/header_text_color"
+                android:text="@string/incentive_yearly_header"
+                android:layout_height="wrap_content">
+            </TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:textColor="@color/pink_primary"
+                android:layout_toRightOf="@+id/title_text"
+                android:text="Staff"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_height="wrap_content">
+
+            </TextView>
+        </RelativeLayout>
+
+        <ListView
+            android:id="@+id/yearly_incentive_list"
+            android:layout_width="match_parent"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_height="match_parent"
+            android:divider="@null"
+            />
+
+    </LinearLayout>
+
+    <!-- Content Area for Tab 2 -->
+    <LinearLayout
+        android:id="@+id/content_tab_quarterly"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ListView
+            android:id="@+id/quarterly_incentive_list"
+            android:layout_width="match_parent"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_height="match_parent"
+            android:divider="@null"/>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/content_tab_others"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:orientation="vertical"
+           android:layout_marginTop="20dp"
+           android:layout_marginLeft="60dp"
+           android:layout_height="wrap_content"
+        >
+           <TextView
+               android:layout_width="wrap_content"
+               android:textSize="16sp"
+               android:text="LEVEL 1"
+               android:textStyle="bold"
+               android:textColor="@color/black"
+               android:layout_height="wrap_content">
+
+           </TextView>
+           <TextView
+               android:layout_width="wrap_content"
+               android:textSize="12sp"
+               android:text="Order Value"
+               android:textStyle="bold"
+               android:textColor="#E91E63"
+               android:layout_height="wrap_content">
+
+           </TextView>
+           <TextView
+               android:layout_width="wrap_content"
+               android:textSize="12sp"
+               android:text="Less then R1 200"
+               android:textStyle="bold"
+               android:textColor="@color/black"
+               android:layout_height="wrap_content">
+
+           </TextView>
+           <TextView
+               android:layout_width="wrap_content"
+               android:textSize="12sp"
+               android:text="Your Free Support Tools"
+               android:textStyle="bold"
+               android:textColor="#E91E63"
+               android:layout_height="wrap_content">
+
+           </TextView>
+           <TextView
+               android:layout_width="wrap_content"
+               android:textSize="12sp"
+               android:text="skincare Sample"
+               android:textStyle="bold"
+               android:textColor="@color/black"
+               android:layout_height="wrap_content">
+
+           </TextView>
+           <TextView
+               android:layout_width="wrap_content"
+               android:textSize="12sp"
+               android:text="Size skincare product"
+               android:textStyle="bold"
+               android:textColor="@color/black"
+               android:layout_height="wrap_content">
+
+           </TextView>
+
+       </LinearLayout>
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/demo_product"
+            android:layout_height="100dp">
+
+        </ImageView>
+
+        <View
+            android:layout_width="match_parent"
+            android:background="#dfdfdf"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_height="1.8dp">
+
+        </View>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="0dp"
+                android:textSize="12sp"
+                android:layout_weight="2"
+                android:text="Incentive 1"
+                android:gravity="center"
+                android:textColor="#7603cc"
+                android:textStyle="bold"
+                android:layout_height="50dp">
+
+            </TextView>
+            <TextView
+                android:layout_width="0dp"
+                android:textSize="12sp"
+                android:layout_weight="2"
+                android:text="Incentive 2"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_height="50dp">
+
+            </TextView>
+            <TextView
+                android:layout_width="0dp"
+                android:textSize="12sp"
+                android:layout_weight="2"
+                android:text="Incentive 3"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_height="50dp">
+
+            </TextView>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="0dp"
+                android:textSize="12sp"
+                android:layout_weight="2"
+                android:text="Incentive 4"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:layout_height="50dp">
+
+            </TextView>
+            <TextView
+                android:layout_width="0dp"
+                android:textSize="12sp"
+                android:layout_weight="2"
+                android:text="Incentive 5"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_height="50dp">
+
+            </TextView>
+            <TextView
+                android:layout_width="0dp"
+                android:textSize="12sp"
+                android:layout_weight="2"
+                android:text="Incentive 6"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_height="50dp">
+
+            </TextView>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
