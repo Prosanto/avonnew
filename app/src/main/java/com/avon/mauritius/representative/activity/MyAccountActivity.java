@@ -52,7 +52,8 @@ public class MyAccountActivity extends BaseActivity {
                 startActivity(intent);
                 break;
             case R.id.layout_for_sells_details:
-
+                intent = new Intent(mContext, SalesDetailActivity.class);
+                startActivity(intent);
 
                 break;
             case R.id.layout_for_incentive:

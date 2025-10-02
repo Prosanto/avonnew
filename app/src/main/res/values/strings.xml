@@ -276,8 +276,10 @@ explicabo. Nemo enim ipsam voluptatem qui</string>
 
     <string name="yearly_incentive">Yearly</string>
     <string name="quarterly_incentive">Quarterly</string>
-    <string name="others_incentive">Othen Incentive</string>
+    <string name="others_incentive">Other Incentive</string>
     <string name="incentive_yearly_header">Star Club Level Previous Year: </string>
+
+    <string name="quarterly">Quarterly</string>
 
 
 

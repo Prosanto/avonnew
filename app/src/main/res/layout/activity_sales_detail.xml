@@ -1,0 +1,225 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- Tabs -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:orientation="horizontal">
+
+        <!-- Tab 1 -->
+        <LinearLayout
+            android:id="@+id/yearly_tab"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@drawable/broshureab_selected">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/yearly_incentive"
+                android:textSize="14sp"
+                android:textColor="#7603cc"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <!-- Tab 2 -->
+        <LinearLayout
+            android:id="@+id/quarterly_tab"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@drawable/broshureab_deselected">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/quarterly_incentive"
+                android:textColor="#7603cc"
+                android:textSize="14sp"
+
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Divider -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1.5dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="#dfdfdf" />
+
+    <!-- Content Area for Tab 1 -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/content_tab_yearly"
+            android:layout_width="match_parent"
+            android:visibility="visible"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:paddingRight="8dp"
+                android:paddingLeft="8dp"
+                android:paddingTop="8dp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textColor="@color/black"
+                    android:text="@string/quarterly"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textSize="12sp"
+                    android:background="#cdd6ff"
+                    android:layout_height="30dp">
+
+                </TextView>
+                <View
+                    android:layout_width="1dp"
+                    android:background="#99acff"
+                    android:layout_height="match_parent">
+
+                </View>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textColor="@color/black"
+                    android:text="@string/previous_year"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textSize="12sp"
+                    android:background="#cdd6ff"
+                    android:layout_height="30dp">
+
+                </TextView>
+                <View
+                    android:layout_width="1dp"
+                    android:background="#99acff"
+                    android:layout_height="match_parent">
+
+                </View>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textColor="@color/black"
+                    android:text="@string/current_year"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textSize="12sp"
+                    android:background="#cdd6ff"
+                    android:layout_height="30dp">
+
+                </TextView>
+
+            </LinearLayout>
+            <ListView
+                android:id="@+id/yearly_incentive_list"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:divider="@null"
+                />
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/lineChart_yearly"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_marginTop="16dp"/>
+        </LinearLayout>
+    </ScrollView>
+
+
+    <!-- Content Area for Tab 2 -->
+    <LinearLayout
+        android:id="@+id/content_tab_quarterly"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:paddingRight="8dp"
+            android:paddingLeft="8dp"
+            android:paddingTop="8dp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:text="@string/quarterly"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:background="#cdd6ff"
+                android:layout_height="30dp">
+
+            </TextView>
+            <View
+                android:layout_width="1dp"
+                android:background="#99acff"
+                android:layout_height="match_parent">
+
+            </View>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:text="@string/previous_year"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:background="#cdd6ff"
+                android:layout_height="30dp">
+
+            </TextView>
+            <View
+                android:layout_width="1dp"
+                android:background="#99acff"
+                android:layout_height="match_parent">
+
+            </View>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:text="@string/current_year"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:background="#cdd6ff"
+                android:layout_height="30dp">
+
+            </TextView>
+
+        </LinearLayout>
+            <!-- ListView for Table -->
+            <ListView
+                android:id="@+id/quarterly_incentive_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@null"/>
+
+            <!-- Line Chart -->
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/lineChart"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_marginTop="16dp"/>
+    </LinearLayout>
+
+</LinearLayout>
